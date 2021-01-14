@@ -1,0 +1,47 @@
+<div class="container">
+
+    <h1>Burger Logger</h1>
+    <img src="assets/images/burger.jpeg" alt="burger_image">
+
+    <section class="rows">
+        <div id="new-burgers">
+            <h2>New Burgers!</h2>
+            <ul>
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li class="newBurgers">
+                    {{burger_name}}
+
+                    <button class="btn btn-success" data-id="{{id}}">
+                        Devour It!
+                    </button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+
+        <div id="eaten-burgers">
+            <h2>Devoured Burgers!</h2>
+            <ol>
+                {{#each burgers}}
+                {{#if devoured}}
+                <li class="devouredBurgers">
+                    <span>{{burger_name}}</span>
+                    <button class="btn btn-danger" data-id="{{id}}">X</button>
+                </li>
+                {{/if}}
+                {{/each}}
+            </ol>
+        </div>
+    </section>
+
+
+    <form id="create-form">
+        <div class="form-group">
+            <textarea class="form-control" id="burgerName" name="burger_name" rows="4" cols="50"
+                placeholder="Enter a burger you would like to eat"></textarea>
+        </div>
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+</div>

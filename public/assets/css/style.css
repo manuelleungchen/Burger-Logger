@@ -1,0 +1,69 @@
+body {
+    background-color: papayawhip;
+    box-sizing: border-box;
+
+}
+
+.container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#new-burgers {
+    background-color: peachpuff;
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+    width: 48%;
+}
+
+#eaten-burgers {
+    background-color: peachpuff;
+    border: 2px solid orange;
+    border-radius: 10px;
+    padding: 10px;
+    width: 48%;
+}
+
+#create-form {
+    padding: 20px;
+}
+
+.rows {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+h1 {
+    color:orange;
+    font-weight: bolder;
+    font-family: 'Texturina', serif;
+}
+
+h2 {
+    color: peru;
+    font-size: 25px;
+    font-family: 'Big Shoulders Inline Text', cursive;
+    font-weight: bold;
+}
+
+img {
+    width: 200px;
+}
+
+
+li {
+    text-align: right;
+    font-family: 'Big Shoulders Inline Text', cursive;
+    color: peru;
+    font-size: 18px;
+    margin: 5px;
+}
+
+li button {
+    font-family: 'Big Shoulders Inline Text', cursive;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}

@@ -15,24 +15,35 @@ router.get("/", (req, res) => {
     });
 });
 
-router.get("/api/burgers", (req, res) => {
-    
+router.post("/api/burgers", (req, res) => {
+
     burger.create("burger_name, devoured", [req.body.name, req.body.devoured], (result) => {
-        
-        res.json( { id: result.insertId } );
+
+        res.json({ id: result.insertId });
     });
 });
 
 router.put("/api/burgers/:id", (req, res) => {
     const condition = `id = ${req.params.id}`;
-    burger.update("devoured", condition, (result) => {
-        (result) => {
-            if (result.changedRows === 0) {
-              // If no rows were changed, then the ID must not exist, so 404
-              return res.status(404).end();
-            }
-            res.status(200).end();
-          }
+    burger.update("devoured = true", condition, (result) => {
+        if (result.changedRows === 0) {
+            // If no rows were changed, then the ID must not exist, so 404
+            return res.status(404).end();
+        }
+        res.status(200).end();
+
+    })
+})
+
+router.delete("/api/burgers/:id", (req, res) => {
+    const condition = `id = ${req.params.id}`;
+    burger.delete(condition, (result) => {
+        if (result.changedRows === 0) {
+            // If no rows were changed, then the ID must not exist, so 404
+            return res.status(404).end();
+        }
+        res.status(200).end();
+
     })
 })
 
