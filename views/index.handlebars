@@ -12,7 +12,7 @@
                 {{#unless devoured}}
                 <li class="newBurgers">
                     <span>{{burger_name}}</span>
-                    <button class="btn btn-success" data-id="{{id}}">Devour It!</button>
+                    <button class="btn btn-success devourButton" data-id="{{id}}">Devour It!</button>
                 </li>
                 {{/unless}}
                 {{/each}}
@@ -27,7 +27,7 @@
                 {{#if devoured}}
                 <li class="devouredBurgers">
                     <span>{{burger_name}}</span>
-                    <button class="btn btn-danger" data-id="{{id}}">X</button>
+                    <button class="btn btn-danger removeButton" data-id="{{id}}">X</button>
                 </li>
                 {{/if}}
                 {{/each}}
