@@ -4,23 +4,22 @@
     <img src="assets/images/burger.jpeg" alt="burger_image">
 
     <section class="rows">
+        {{!-- New Burgers Section --}}
         <div id="new-burgers">
             <h2>New Burgers!</h2>
             <ul>
                 {{#each burgers}}
                 {{#unless devoured}}
                 <li class="newBurgers">
-                    {{burger_name}}
-
-                    <button class="btn btn-success" data-id="{{id}}">
-                        Devour It!
-                    </button>
+                    <span>{{burger_name}}</span>
+                    <button class="btn btn-success" data-id="{{id}}">Devour It!</button>
                 </li>
                 {{/unless}}
                 {{/each}}
             </ul>
         </div>
 
+        {{!-- Eaten Burgers Section --}}
         <div id="eaten-burgers">
             <h2>Devoured Burgers!</h2>
             <ol>
@@ -36,12 +35,13 @@
         </div>
     </section>
 
-
+    {{!-- Form to submit new burgers --}}
     <form id="create-form">
         <div class="form-group">
             <textarea class="form-control" id="burgerName" name="burger_name" rows="4" cols="50"
                 placeholder="Enter a burger you would like to eat"></textarea>
         </div>
+        {{!-- Submit button --}}
         <button class="btn btn-primary" type="submit">Submit</button>
     </form>
 </div>
