@@ -55,7 +55,7 @@ THEN the burger is removed from the database
 3. Run command ```npm install``` to install any dependencies.
 
 ## Usage    
-* Navigate to the site.
+* Navigate to the site [Burger Logger](https://stark-falls-45223.herokuapp.com/).
 * Enter the name of a burger.
 * Click on the submit button.
 * Click on the `Devour it!` button.
